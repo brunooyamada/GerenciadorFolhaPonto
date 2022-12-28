@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Gerenciador de arquivos";
+}
+
+<form asp-controller="Arquivos" asp-action="ImportarArquivos" method="post" enctype="multipart/form-data">
+    <div class="text-center">
+        <div>
+            <div class="text-box">
+                <p>Selecione os arquivos de Folha de ponto para upload.</p>
+            </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                <input class="form-control" type="file" id="formFileMultiple" name="arquivos" multiple>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+            </div>
+        </div>
+    </div>
+</form>
